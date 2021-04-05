@@ -14,7 +14,7 @@ function renderLicenseBadge(license) {
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
   if(license !== 'None'){
-    return  `![License](https://img.shields.io/badge/license-${license}-blue.svg)`;
+    return  `https://opensource.org/licenses/${license}`;
   }
 
   return '';
@@ -22,25 +22,43 @@ function renderLicenseLink(license) {
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(license) {}
+function renderLicenseSection(license) {
+  if(license !== 'None'){
+    return  `LICENSE INFO`;
+  }
+
+  return '';
+}
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   
   return `
-  THIS IS OUR FILE WITH SOME INFO
+  
   # ${data.title}
 
-  THIS IS MY EMAIL
-  ##${data.email}
+  ${renderLicenseBadge(data.license)}
+ 
+  ## LICENSE LINK:
+  ### ${renderLicenseLink(data.license)};
 
-  DESCRIPTION OF REPO
-  ##${data.description}
+  ## LICENSE INFORMATION: 
+  ### ${renderLicenseSection(data.license)}
+
+  ## THIS IS MY EMAIL:
+  ### ${data.email}
+
+  ## THIS IS MY GITHUB USERNAME:
+  ### ${data.username}
+
+  ## DESCRIPTION OF MY APPLICATION:
+  ### ${data.description}
 
 
-  ${renderLicenseBadge(data.license)};
-  ${renderLicenseLink(data.license)};
-  ${renderLicenseSection(data.license)}
+
+  
+  
+  
 
 `;
 }

@@ -1,13 +1,4 @@
-
-  THIS IS OUR FILE WITH SOME INFO
-  # apples
-
-  THIS IS MY EMAIKL
-  @@@
-
-  DESCRIPTION OF REPO
-  fruits
+This application will help you build a comprehensive README. 
 
 
-  ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 
